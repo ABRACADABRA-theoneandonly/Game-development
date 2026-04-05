@@ -1,10 +1,10 @@
 import pgzrun
 import random
 HEIGHT=600
-WIDTH=800
+WIDTH=600
 levels=10
 startspeed=10
-itemslist=["battery","chips","corn","baby"]
+itemslist=["bottle","chips","bottle cap","wrapper"]
 game_over=False
 game_complete= False
 currentlevel=1
@@ -13,7 +13,7 @@ animations=[]
 def draw():
     global items
     screen.clear()
-    screen.blit("bgd",(0,0))
+    screen.blit("sea",(0,0))
     if game_over:
         screen.draw.text("YOU LOSE YOU PIECE OF BANANA",fontsize=30,center=(400,300),color="black")
     elif game_complete:
@@ -32,7 +32,7 @@ def make_items(extraitems):
     animateitems(newitems)
     return newitems
 def optiontocreate(extraitems):
-    itemstocreate=["bottle"]
+    itemstocreate=["fish"]
     for i in range(0,extraitems):
         randomoption=random.choice(itemslist)
         itemstocreate.append(randomoption)
@@ -64,7 +64,7 @@ def on_mouse_down(pos):
     global items, currentlevel
     for i in items:
         if i.collidepoint(pos):
-            if "bottle" in i.image:
+            if "fish" in i.image:
                 handlegame_complete()
             else:
                 handlegame_over()
