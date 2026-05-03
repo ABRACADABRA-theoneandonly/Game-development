@@ -37,6 +37,71 @@ def draw():
     screen.draw.filled_rect(tbox,"dark blue")
     screen.draw.filled_rect(sbox,"dark blue")
     message="Welcome to Quiz Master"
-    message=message+f"         Q: {index} of {count}"
+    message=message+f"           m Q: {index} of {count}"
     screen.draw.textbox(message, mbox, color="black")
+    screen.draw.textbox(str(timeleft),tbox,color="black")
+    screen.draw.textbox("skip",sbox,color="black")
+    screen.draw.textbox(question[0].strip(),qbox,color="black")
+    i=1
+    for j in boxes:
+        screen.draw.textbox(question[i].strip(),j,color="black")
+        i+=1
+def update():
+    movemessage()
+def movemessage():
+    mbox.x-=2
+    if mbox.right<0:
+        mbox.left=WIDTH
+def readquestion():
+    global count,questions
+    file=open(filename,"r")
+    for i in file:
+        questions.append(i)
+        count+=1
+    file.close()
+def readnextquestion():
+    global index
+    index+=1
+    return questions.pop(0).split(",")
+def on_mouse_down(pos):
+    i=1
+    for j in boxes:
+        if j.collidepoint(pos):
+            if i is int(question[5]):
+                correctanswer()
+            else:
+                isgameover()
+        i+=1
+    if sbox.collidepoint(pos):
+        skipquestion()
+def correctanswer():
+    global score,question,timeleft,questions
+    score+=1
+    if questions:
+        question=readnextquestion()
+        timeleft=10
+    else:
+        isgameover()
+def isgameover():
+    global question,timeleft,gameover
+    msg=f"Game over u got: {score} questions correct"
+    question=[msg,"-","-","-","-",5]
+    timeleft=0
+    gameover=True
+def skipquestion():
+    global question,timeleft
+    if questions and not gameover:
+        question=readnextquestion()
+        timeleft=10
+    else:
+        isgameover()
+def updatetime():
+    global timeleft
+    if timeleft:
+        timeleft-=1
+    else:
+        isgameover()
+readquestion()
+question=readnextquestion()
+clock.schedule_interval(updatetime,1)
 pgzrun.go()
