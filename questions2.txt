@@ -5,6 +5,6 @@ What age are you allowed to vote democratically?,16,18,20,13,1
 What kind of person doesn't use animal-based products?,jester,vegetarian,humantarian,vegan,4
 What type of angle goes above 90 degrees?,reflex,acute,obtuse,right angle,3
 Who saves lives?,doctor,cashier,regular person,anyone can help others,4
-Which one of these is a carbohydrate?eggs,sweet potato,courgette,WATER,2
+Which one of these is a carbohydrate?,eggs,sweet potato,courgette,WATER,2
 Where did the Romans originate from?,Italy,Gaul,Britain,Macedonia,1
-Which brand sells shoes?Gucci,Claire's,Adidas,Nesquick,3
+Which brand sells shoes?,Gucci,Claire's,Adidas,Nesquick,3
