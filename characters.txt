@@ -1,0 +1,10 @@
+I have keys but no locks. I have space but no room. You can enter but you cannot go outside. Who am I?,door,safe,drawer,keyboard,4
+I speak without a mouth and hear without ears. I have nobody but I come alive with wind. Who am I?,sound,echo,cave,subduction,2
+I am tall when I am young and short when I am old. Who am I?,chalk,walkie-talkie,candle,flower,3
+I can travel around the world while staying in a corner. Who am I?,time-traveller,box,kite,stamp,4
+I am always hungry and I must always be fed. The finger I touch will soon turn red. Who am I?,fire,baby,charcoal,sound,1
+I can fly without wings. I can cry without eyes. Wherever I go darkness flies. Who am I?,sky,clouds,wind,air,2
+I have a face and two hands but no arms or legs. Who am I?,bell,chicken,backrooms-monster,clock,4
+I go up but never come down. Who am I?,score,age,time,money,2
+I’m full of holes but I can hold water. Who am I?,ripped-jeans,bucket,sponge,towel,3
+I’m light as a feather yet even the strongest man cannot hold me for long. Who am I?,breath,telephone,water,tickle,1
